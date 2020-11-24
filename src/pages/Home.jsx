@@ -1,7 +1,6 @@
 import React from "react";
 
 // assets
-import Hero from "../assets/pale-doctor.png"
 import Arrow from "../assets/chevron-forward-outline.svg"
 
 
@@ -18,18 +17,18 @@ const Home = () => {
                     We enable users to create archive of their entire medical history from prescriptions to reports to xrays.Everything is stored on blockchain to ensure 100% security and immutability.
                 </p>
                 <section className="main__text-btn-group">
-                    <a className="btn main__text-btn-group-patient">
+                    <a className="btn main__text-btn-group-patient" href="/">
                         <span>I am a patient</span>
-                        <img width="20px" height="20px" src={Arrow} alt=""/>
+                        <img width="20px" height="20px" src={Arrow} alt=" >"/>
                     </a>
-                    <a className="btn main__text-btn-group-doctor">
+                    <a className="btn main__text-btn-group-doctor" href="/">
                         <span>I am a doctor</span>
-                        <img width="20px" height="20px" src={Arrow} alt=""/>
+                        <img width="20px" height="20px" src={Arrow} alt=" >"/>
                     </a>
                 </section>
             </section>
             <section className="main__image">
-                <img width="600x" height="500px" src="https://cdn.dribbble.com/users/1355613/screenshots/6637974/doctor.jpg" />
+                <img width="600x" height="500px" src="https://cdn.dribbble.com/users/1355613/screenshots/6637974/doctor.jpg" alt="medh" />
             </section>
         </section>
     )
