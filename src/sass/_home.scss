@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 0;
+    // background-color: #E3F2FF;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .35s ease;
+    margin-bottom: 40px;
+    // border: 1px solid red;
+
+    &__text {
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 50%;
+        
+        
+
+        &-primary {
+            font-size: 45px;
+            font-weight: 500;
+            color: rgb(39, 48, 54);
+        }
+
+        &-secondary {
+            margin-top: 0px;
+            color: #56575b;
+            font-size: 18px;
+        }
+
+        &-btn-group {
+
+            width: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+            margin-top: 20px;
+
+            &-patient {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 18px;
+                background-image: linear-gradient(to bottom right, #0C6CC2, #0149A7);
+                color: inherit;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background-image: linear-gradient(to bottom right, #0149A7, #0C6CC2);
+                    box-shadow: 6px 6px 11px 0px rgba(1, 73, 167, 0.51),
+                    -4px -4px 11px 0px rgba(1, 73, 167, 0.51);
+                }
+            }
+
+            &-doctor {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 18px;
+                background-image: linear-gradient(to bottom right, #0C6CC2, #0149A7);
+                color: inherit;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background-image: linear-gradient(to bottom right, #0149A7, #0C6CC2);
+                    box-shadow: 6px 6px 11px 0px rgba(1, 73, 167, 0.51),
+                    -4px -4px 11px 0px rgba(1, 73, 167, 0.51);
+                }
+            }
+
+        }
+    }
+
+    &__image {
+        margin-top: 50px;
+        align-self: flex-end;
+    }
+}
