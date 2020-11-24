@@ -7,7 +7,6 @@ import './sass/base.scss';
 import Home from "./pages/Home";
 
 // components
-import  Pricing  from "./components/Pricing";
 import { Navbar } from "./components/Navbar";
 
 function App() {
