@@ -1,0 +1,28 @@
+.floater {
+    padding: 10px;
+    height: 20px;
+    background-color: rebeccapurple;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 7px;
+    color: white;
+    animation-direction: alternate;
+    transition: all 3s ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+// .float {
+//     animation-name: float;
+//     animation-duration: 10s;
+//     animation-iteration-count: infinite;
+//     animation-timing-function: ease-in-out;
+//     // margin-left: 30px;
+//     // margin-top: 5px;
+// }

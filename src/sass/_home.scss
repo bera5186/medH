@@ -4,11 +4,18 @@ body {
     // background-color: #E3F2FF;
 }
 
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .main {
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: all .35s ease;
+    margin-top: 80px;
     margin-bottom: 40px;
     // border: 1px solid red;
 
@@ -18,6 +25,7 @@ body {
         flex-direction: column;
         align-items: flex-start;
         width: 50%;
+        margin-top: 100px;
         
         
 
@@ -31,6 +39,7 @@ body {
             margin-top: 0px;
             color: #56575b;
             font-size: 18px;
+            max-width: 400px;
         }
 
         &-btn-group {
@@ -50,6 +59,7 @@ body {
                 background-image: linear-gradient(to bottom right, #0C6CC2, #0149A7);
                 color: inherit;
                 transition: all 0.3s ease;
+                text-decoration: none;
 
                 &:hover {
                     background-image: linear-gradient(to bottom right, #0149A7, #0C6CC2);
@@ -66,6 +76,7 @@ body {
                 background-image: linear-gradient(to bottom right, #0C6CC2, #0149A7);
                 color: inherit;
                 transition: all 0.3s ease;
+                text-decoration: none;
 
                 &:hover {
                     background-image: linear-gradient(to bottom right, #0149A7, #0C6CC2);
@@ -78,7 +89,9 @@ body {
     }
 
     &__image {
-        margin-top: 50px;
+        margin-top: 100px;
         align-self: flex-end;
+        position: relative;
+        z-index: 5;
     }
 }

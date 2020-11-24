@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export const Navbar = () => {
+
     return (
-        <div className="container">
-            <header className="navbar">
+        
+            <header onScrollCapture className="navbar">
                 <h1 className="navbar__left">
                     medH
                 </h1>
@@ -12,6 +13,6 @@ export const Navbar = () => {
                     <li className="navbar__right-item"><a className="navbar__right-item--link"href="/">Lorem </a></li>
                 </ul>
             </header>
-        </div>
+    
     )
 }

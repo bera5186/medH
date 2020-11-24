@@ -17,7 +17,6 @@ function App() {
       <Navbar />
       <main>
         <Home />
-        <Pricing />
       </main>
     </>
   )
