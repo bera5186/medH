@@ -3,7 +3,7 @@ import React from 'react'
 // assets
 import Checkmark from "../assets/checkmark.svg"
 
-const Floater = ({top, right, left, bottom, color, text, width, animationTime}) => {
+const Floater = ({top, right, left, bottom, color, text, width, animationTime, animationDelay}) => {
 
     
 
@@ -15,7 +15,8 @@ const Floater = ({top, right, left, bottom, color, text, width, animationTime}) 
             bottom: bottom, 
             backgroundColor: color, 
             width: width,
-            animation: `float ${animationTime} ease-in-out infinite`
+            animation: `float ${animationTime} ease-in-out infinite`,
+            animationDelay: animationDelay
         }}>
             <div className="floater__check">
                 <img width="27px" height="27px" style={{ marginTop: "5px"}} src={Checkmark} alt="done" />

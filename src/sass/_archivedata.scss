@@ -1,0 +1,37 @@
+.archivehome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__text {
+        font-weight: 700;
+        font-size: 64px;
+    }
+
+    &__addnew {
+        &-btn {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 18px;
+            color: white;
+            background-image: linear-gradient(to bottom right, #0C6CC2, #0149A7);
+            padding: 10px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            border-radius: 4px;
+
+            &:hover {
+                background-image: linear-gradient(to bottom right, #0149A7, #0C6CC2);
+                box-shadow: 6px 6px 11px 0px rgba(1, 73, 167, 0.51),
+                -4px -4px 11px 0px rgba(1, 73, 167, 0.51);
+            }
+
+            &--img {
+                margin-right: 10px;
+            }
+        }
+    }
+}
