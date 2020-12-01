@@ -1,17 +1,23 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from "react-router-dom"
+import { UiContext } from "../../../context/UiContext";
 
 // assets
 import AddIcon from "../../../assets/add-circle-outline.svg"
+import Modal from '../../Modal';
 
 const ArchiveData = () => {
+
+    const [modalState, setModalState] = useContext(UiContext);
+    
     return (
         <div className="archivehome container">
+            <Modal />
             <h1 className="archivehome__text">
                 Your Archive
             </h1>
             <section className="archivehome__addnew">
-            <Link className="archivehome__addnew-btn" href="/">
+            <Link onClick={ () => { setModalState("block") } } className="archivehome__addnew-btn" href="/">
               <span>Add New Record</span>
               <img className="archivehome__addnew-btn--img" width="27px" height="27px" src={AddIcon} alt="" />
             </Link>

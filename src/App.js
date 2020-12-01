@@ -14,8 +14,10 @@ import { Navbar } from "./components/Navbar";
 import Pricing from "./components/Pricing";
 import ArchiveData from "./components/dashboard/user/ArchiveData";
 
+// context
+import { Provider } from "./context/UiContext";
+
 function App() {
-  
   return (
     <Switch>
       <Route exact path="/">

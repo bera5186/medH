@@ -13,3 +13,29 @@
     outline: none;
     border-radius: 8px;
 }
+
+.btn-submit {
+    padding: 10px 15px;
+    background-image: linear-gradient(to bottom right, #0C6CC2, #0149A7);
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+
+    &:hover {
+        box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    }
+    
+}
+
+.btn-close {
+    background-color: #ED4956;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+
+}
