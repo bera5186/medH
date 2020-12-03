@@ -1,15 +1,27 @@
-import React from 'react';
-import ArchiveData from '../components/dashboard/user/ArchiveData';
-import Pricing from '../components/Pricing';
+import React, { useContext } from "react";
 
-import { Router } from "@reach/router"
+// components
+import ArchiveData from "../components/dashboard/user/ArchiveData";
+import Spinner from "../components/Animations/Spinner";
+
+// context
+import { UiContext } from "../context/UiContext";
+
+
 
 const Dashboard = () => {
-    return (
-        <div className="dashboard">
-            <ArchiveData />
-        </div>
-    )
-}
+  const { loading } = useContext(UiContext);
+  const [loadingState, setLoadingState] = loading;
+
+  return (
+    <>
+    <div className="dashboard">
+      <ArchiveData />
+      
+    </div>
+    {loadingState == true ? <Spinner /> : ""}
+    </>
+  );
+};
 
 export default Dashboard;

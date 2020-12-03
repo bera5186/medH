@@ -8,7 +8,9 @@ import Modal from '../../Modal';
 
 const ArchiveData = () => {
 
-    const [modalState, setModalState] = useContext(UiContext);
+    const { modal } = useContext(UiContext);
+    const [modalState, setModalState] = modal;
+
     
     return (
         <div className="archivehome container">

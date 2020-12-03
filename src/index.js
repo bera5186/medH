@@ -3,18 +3,21 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { ContextDevTool, debugContextDevtool } from 'react-context-devtool';
+import { ContextDevTool, debugContextDevtool } from "react-context-devtool";
 
 import { BrowserRouter } from "react-router-dom";
-import { Provider } from "./context/UiContext";
+import { UiProvider } from "./context/UiContext";
+import { StateProvider } from "./context/StateContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </Provider>
+    <UiProvider>
+      <StateProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </StateProvider>
+    </UiProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
@@ -23,4 +26,4 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
-debugContextDevtool(document.getElementById("root"))
+debugContextDevtool(document.getElementById("root"));
