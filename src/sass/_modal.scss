@@ -19,8 +19,9 @@
         justify-content: space-between;
         background-color: white;
         width: 30%;
-        // height: 70%;
-        overflow: auto;
+        height: 70%;
+        overflow-x: hidden;
+        overflow-y: auto;
         margin: 0 auto;
         padding: 15px;
         padding-bottom: 0;

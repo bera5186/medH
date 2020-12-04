@@ -5,17 +5,24 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { ContextDevTool, debugContextDevtool } from "react-context-devtool";
 
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import { UiProvider } from "./context/UiContext";
 import { StateProvider } from "./context/StateContext";
+import AuthProviderWithHistory from "./auth/authWithHistory";
+
+import { ToastProvider } from "react-toast-notifications";
 
 ReactDOM.render(
   <React.StrictMode>
     <UiProvider>
       <StateProvider>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
+        <ToastProvider>
+          <Router>
+            <AuthProviderWithHistory>
+              <App />
+            </AuthProviderWithHistory>
+          </Router>
+        </ToastProvider>
       </StateProvider>
     </UiProvider>
   </React.StrictMode>,

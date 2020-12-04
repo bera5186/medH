@@ -7,6 +7,9 @@ import Spinner from "../components/Animations/Spinner";
 // context
 import { UiContext } from "../context/UiContext";
 
+// auth0
+import { withAuthenticationRequired } from "@auth0/auth0-react";
+
 
 
 const Dashboard = () => {
@@ -24,4 +27,6 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default withAuthenticationRequired(Dashboard, {
+  onRedirecting: () => <Spinner />
+});

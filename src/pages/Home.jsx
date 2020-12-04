@@ -6,11 +6,21 @@ import Floater from "../components/Floater";
 import { Navbar } from "../components/Navbar";
 import Pricing from "../components/Pricing";
 
+// Auth0
+import { useAuth0 } from "@auth0/auth0-react";
+import Spinner from "../components/Animations/Spinner";
+
 
 
 
 const Home = () => {
 
+  const { loginWithRedirect, user, isLoading } = useAuth0();
+
+  if(isLoading) {
+    <Spinner />
+  }
+  console.log(user)
   
   // const [hash, setHash] = useState('')
 
@@ -50,11 +60,19 @@ const Home = () => {
             blockchain to ensure 100% security and immutability.
           </p>
           <section className="main__text-btn-group">
-            <a className="btn main__text-btn-group-patient" href="/">
+            <a className="btn main__text-btn-group-patient" href onClick={() => {
+              loginWithRedirect({
+                screen_hint: "signup"
+              })
+            }}>
               <span>Make my archive</span>
               <img width="20px" height="20px" src={Arrow} alt=" >" />
             </a>
-            <a className="btn main__text-btn-group-doctor" href="/">
+            <a className="btn main__text-btn-group-doctor" href onClick={() => {
+              loginWithRedirect({
+                screen_hint: "signup"
+              })
+            }}>
               <span>I am a doctor</span>
               <img width="20px" height="20px" src={Arrow} alt=" >" />
             </a>
