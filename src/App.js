@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { Route, Switch } from "react-router-dom";
 
@@ -17,7 +17,14 @@ import ArchiveData from "./components/dashboard/user/ArchiveData";
 // context
 import { Provider } from "./context/UiContext";
 
+// 3rd party
+const axios = require("axios").default ;
+
+
+
+
 function App() {
+
   return (
     <Switch>
       <Route exact path="/">

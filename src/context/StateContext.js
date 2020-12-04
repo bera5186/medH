@@ -6,12 +6,14 @@ export const StateProvider = (props) => {
     const [hash, setHash] = useState("")
     const [name, setName] = useState("")
     const [desc, setDesc] = useState("")
+    const [tableData, setTableData] = useState([])
 
     return (
         <StateContext.Provider value={{
             fileHash: [hash, setHash],
             fileName: [name, setName],
-            fileDesc: [desc, setDesc]
+            fileDesc: [desc, setDesc],
+            tableData: [tableData, setTableData]
         }}>
             {
                 props.children

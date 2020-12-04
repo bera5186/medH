@@ -20,31 +20,7 @@ const Home = () => {
   if(isLoading) {
     <Spinner />
   }
-  console.log(user)
   
-  // const [hash, setHash] = useState('')
-
-  // const upload = async (e) => {
-  //   const file = e.target.files[0];
-  //   const added = await ipfsC.add(file, {
-  //     // progress: (prog) => console.log(`received: ${prog}`),
-  //   });
-    
-  //   setHash(toBase32(added.path));
-  // };
-
-
-
-  // const getfile = async () => {
-
-  //   const root = document.getElementById("root")
-    
-  //   const img = document.createElement("img")
-  //   img.src = 'https://'+hash+'.ipfs.dweb.link'
-
-  //   root.appendChild(img)
-
-  // };
 
   return (
     <>

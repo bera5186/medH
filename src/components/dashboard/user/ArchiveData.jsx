@@ -5,6 +5,7 @@ import { UiContext } from "../../../context/UiContext";
 // assets
 import AddIcon from "../../../assets/add-circle-outline.svg"
 import Modal from '../../Modal';
+import DataTable from './DataTable';
 
 const ArchiveData = () => {
 
@@ -25,7 +26,7 @@ const ArchiveData = () => {
             </Link>
             </section>
             <section className="archivehome__data">
-                Some Sexy data Soon....
+                <DataTable />
             </section>
         </div>
     )
