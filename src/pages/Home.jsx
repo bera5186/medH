@@ -24,7 +24,6 @@ const Home = () => {
 
   return (
     <>
-      <Navbar />
       <section className="main container">
         <section className="main__text">
           <h3 className="main__text-primary">

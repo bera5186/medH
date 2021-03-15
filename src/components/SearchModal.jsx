@@ -3,25 +3,23 @@ import { UiContext } from "../context/UiContext";
 
 import Spinner from "./Animations/Spinner";
 import ModalForm from "./ModalForm";
+import SearchModalForm from "./SearchModalForm";
 
-const Modal = () => {
+const Searchmodal = () => {
   
-  const { modal, loading } = useContext(UiContext);
+  const { searchModal } = useContext(UiContext);
   
-  const [modalState, setModalState] = modal;
-  const [loadingState, setLoadingState] = loading;
+  const [modalState, setModalState] = searchModal ;
 
   return (
     <>
       <div className="modal" style={{ display: modalState }}>
         <section className="modal__content">
-          {
-            loadingState === true ? <Spinner /> : <ModalForm />
-          }
+          <ModalForm />
         </section>
       </div>
     </>
   );
 };
 
-export default Modal;
+export default Searchmodal;

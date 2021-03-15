@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { ContextDevTool, debugContextDevtool } from "react-context-devtool";
+import { debugContextDevtool } from "react-context-devtool";
 
 import { BrowserRouter as Router } from "react-router-dom";
 import { UiProvider } from "./context/UiContext";
@@ -33,4 +33,7 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
-debugContextDevtool(document.getElementById("root"));
+
+if(process.env.NODE_ENV === "development") {
+  debugContextDevtool(document.getElementById("root"))
+};

@@ -6,8 +6,10 @@ export const Navbar = () => {
   const { logout } = useAuth0();
 
   return (
-    <header onScrollCapture className="navbar">
-      <h1 className="navbar__left">medH</h1>
+    <header className="navbar">
+      <NavLink to="/">
+        <h1 className="navbar__left">medH</h1>
+      </NavLink>
       <ul className="navbar__right">
         <li className="navbar__right-item">
           <NavLink
@@ -24,7 +26,7 @@ export const Navbar = () => {
         </li>
         <li className="navbar__right-item">
           <NavLink className="navbar__right-item--link" to="/dashboard">
-            Lorem{" "}
+            Login{" "}
           </NavLink>
         </li>
       </ul>

@@ -59,7 +59,7 @@ const ModalForm = () => {
         date: date,
       };
       
-      const res = await axios.post('http://localhost:8000/createfile', data)
+      const res = await axios.post('http://medh.herokuapp.com/createfile', data)
 
       if(res.status === 201) {
         addToast('File Upload Succesfull', { appearance: 'success'})

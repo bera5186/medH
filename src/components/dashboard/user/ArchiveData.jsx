@@ -1,11 +1,19 @@
 import React, { useContext } from 'react';
-import { Link } from "react-router-dom"
+
+// context
 import { UiContext } from "../../../context/UiContext";
 
 // assets
 import AddIcon from "../../../assets/add-circle-outline.svg"
 import Modal from '../../Modal';
 import DataTable from './DataTable';
+
+// 3rd party
+import { Link } from "react-router-dom";
+import { withAuthenticationRequired } from "@auth0/auth0-react";
+
+// component
+import Spinner from '../../Animations/Spinner';
 
 const ArchiveData = () => {
 
@@ -32,4 +40,7 @@ const ArchiveData = () => {
     )
 }
 
-export default ArchiveData
+export default withAuthenticationRequired(ArchiveData, {
+    onRedirecting: () => <Spinner />
+
+  });

@@ -1,0 +1,42 @@
+.doc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        
+        &-btnG {
+            margin-top: 30px;
+            width: 250px;
+        }
+
+    }
+
+    &__image {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-around;
+
+        &-img {
+            margin-top: 80px;
+            border: 2px solid #0149A7;
+        }
+    }
+}
+
+.doc-btn {
+    font-size: 18px;
+    background-image: linear-gradient(to bottom right, #0C6CC2, #0149A7);
+    color: inherit;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+        background-image: linear-gradient(to bottom right, #0149A7, #0C6CC2);
+        box-shadow: 6px 6px 11px 0px rgba(1, 73, 167, 0.51),
+            -4px -4px 11px 0px rgba(1, 73, 167, 0.51);
+    }
+}

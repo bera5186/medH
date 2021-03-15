@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import Lottie from "react-lottie";
 import SpinnerAnimation from "../../assets/lotties/spinner.json";
 
